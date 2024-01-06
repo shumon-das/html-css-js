@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML CSS</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="sidebar side">
+        <div class="logo_details">
+            <i class="bx bx1-audible icon"></i>
+            <div class="logo_name">HTML CSS</div>
+            <i class="bx bx-menu" id="btn"></i>
+        </div>
+        <ul class="nav-list">
+            <li>
+                <i class="bx bx-search"></i>
+                <input type="text" placeholder="Search...">
+                <!-- <span class="tooltip">Dashboard</span> -->
+            </li>
+            <li>
+                <a href="#">
+                    <i class="bx bx-grid-alt"></i>
+                    <span class="link_name">Dashboard</span>
+                </a>
+                <span class="tooltip">Dashboard</span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="bx bx-user"></i>
+                    <span class="link_name">User</span>
+                </a>
+                <span class="tooltip">User</span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="bx bx-chat"></i>
+                    <span class="link_name">Message</span>
+                </a>
+                <span class="tooltip">Message</span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="bx bx-pie-chart-alt-2"></i>
+                    <span class="link_name">Analytics</span>
+                </a>
+                <span class="tooltip">Analytics</span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="bx bx-folder"></i>
+                    <span class="link_name">File Manager</span>
+                </a>
+                <span class="tooltip">File Manager</span>
+            </li>
+        </ul>
+    </div>
+    <section class="home">
+        <div class="text">Dashboard</div>
+    </section>
+
+    <script>
+        window.onload = function () {
+            document.querySelector("#btn").addEventListener("click", () => {
+                document.querySelector(".sidebar").classList.toggle("open");
+            })
+
+            document.querySelector(".bx-search").addEventListener("click", () => {
+                document.querySelector(".sidebar").classList.toggle("open");
+            })
+        }
+    </script>
+</body>
+</html>
