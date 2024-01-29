@@ -1,0 +1,32 @@
+body {
+  background-color: indigo;
+}
+.imageBox {
+  background-image: url("https://media.istockphoto.com/id/1496615469/photo/serene-latin-woman-enjoy-sunset-with-gratitude.jpg?s=2048x2048&w=is&k=20&c=f2BOEDlrq_Z90_MAqN0iFt7c6ilF2ci4bSSwaM-JpcU=");
+  position: relative;
+  width: 145px;
+  height: 145px;
+  background-size: cover;
+  border-radius: 50%;
+  margin: 5px 0px 0px 5px;
+}
+
+.emptyBox {
+  width: 155px;
+  height: 155px;
+  background-color: white;
+  margin: 10px;
+  display: inline-block;
+}
+
+.hold {
+  border: 2px solid blue;
+}
+
+.hide {
+  display: none;
+}
+
+.dashed {
+  background-color: cyan;
+}

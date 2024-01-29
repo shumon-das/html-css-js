@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+    <title>Drag and Drop</title>
+    <link href="drag.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="emptyBox">
+      <div class="imageBox" draggable="true"></div>
+    </div>
+    <div class="emptyBox"></div>
+    <div class="emptyBox"></div>
+    <div class="emptyBox"></div>
+
+    <script>
+      const imageBox = document.querySelector(".imageBox");
+      const emptyBoxes = document.getElementsByClassName("emptyBox");
+
+      imageBox.addEventListener("dragstart", (e) => {
+        e.target.classList.add("hold");
+        setTimeout(() => {
+          e.target.classList.add("hide");
+        }, 0);
+      });
+
+      imageBox.addEventListener("dragend", (e) => {
+        console.log("drag Ended");
+        e.target.className = "imageBox";
+      });
+
+      for (const emptyBox of emptyBoxes) {
+        emptyBox.addEventListener("dragover", (e) => {
+          e.preventDefault();
+        });
+
+        emptyBox.addEventListener("dragenter", (e) => {
+          e.target.classList.add("dashed");
+        });
+
+        emptyBox.addEventListener("dragleave", (e) => {
+          e.target.classList.remove("dashed");
+        });
+
+        emptyBox.addEventListener("drop", (e) => {
+          e.target.append(imageBox);
+        });
+      }
+    </script>
+  </body>
+</html>
